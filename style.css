@@ -1,0 +1,107 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    overflow: hidden;
+    background: linear-gradient(40deg, rgb(53, 64, 112), rgb(7, 4, 36));
+  }
+
+
+.planet_container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: -750px;
+}
+
+.sun {
+    width: 750px;
+    height: 750px;
+    margin: 100px;
+    border-radius: 50%;
+    background-color: rgb(233, 202, 27);
+    box-shadow: 12px 29px 81px 10px rgba(153, 140, 23, 0.788);
+}
+
+.sun:hover{
+    cursor: pointer;
+    scale: 1.02;
+}
+
+.planet {
+    border-radius: 50%;
+    margin: 60px;
+    box-shadow: 0 0 20px rgba(192, 192, 192, 0.452);
+}
+
+.planet:hover{
+    cursor: pointer;
+    scale: 1.05;
+}
+
+#mercury {
+    background-color: rgb(111, 114, 114);
+    width: 20px;
+    height: 20px;
+}
+
+#venus {
+    background-color: rgb(189, 122, 22);
+    width: 40px;
+    height: 40px;
+}
+
+#earth {
+    background-color: rgb(40, 96, 250);
+    width: 50px;
+    height: 50px;
+}
+
+#mars {
+    background-color: rgb(190, 82, 32);
+    width: 35px;
+    height: 35px;
+}
+
+#jupiter {
+    background-color: rgb(224, 178, 118);
+    width: 80px;
+    height: 80px;
+}
+
+/*Saturnus blir kodad lite annorlunda eftersom att jag vill lägga till en "ring" */
+#saturn {
+    background-color: rgb(255, 232, 168);
+    width: 60px;
+    height: 60px;
+    position: relative;
+    border-radius: 50%;
+    margin: 70px;
+}
+
+/*Här lägger jag till saturnus ring och använder också z-index för att överlappa */
+#saturn::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%) rotate(-15deg);
+    left: -30px;
+    width: 120px;
+    height: 5px;
+    border-radius: 50%;
+    background-color: rgb(156, 141, 100);
+    z-index: 1;
+}
+
+#uranus {
+    background-color: rgb(161, 211, 214);
+    width: 40px;
+    height: 40px;
+}
+
+#neptune {
+    background-color: rgb(0, 119, 255);
+    width: 50px;
+    height: 50px;
+}
