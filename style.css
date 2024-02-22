@@ -4,8 +4,64 @@ body {
     align-items: center;
     min-height: 100vh;
     overflow: hidden;
-    background: linear-gradient(40deg, rgb(53, 64, 112), rgb(7, 4, 36));
-  }
+    background: linear-gradient(40deg, rgb(43, 49, 75), rgb(0, 0, 0));
+    position: relative;
+}
+
+/* Stjärnor i bakgrunden*/
+body::before {
+    content: '';
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    border-radius: 50%;
+    background: white;
+    box-shadow: 
+    1000px 200px white,
+    400px 1000px white,
+    300px 600px white,
+    800px 900px white,
+    1200px 300px white,
+    1500px 800px white,
+    2500px 100px white,
+    2000px 1200px white,
+    1800px 500px white,
+    2200px 700px white,
+    500px 300px white,
+    700px 1300px white,
+    1900px 600px white,
+    2100px 900px white,
+    2300px 300px white,
+    2500px 800px white,
+    2700px 100px white,
+    2900px 1200px white,
+    3100px 500px white,
+    3300px 700px white,
+    3500px 300px white,
+    3700px 900px white,
+    3900px 100px white,
+    4100px 600px white,
+    4300px 500px white,
+    4500px 700px white,
+    4700px 300px white,
+    4900px 900px white,
+    100px 100px white,
+    200px 200px white,
+    300px 300px white,
+    400px 400px white,
+    500px 500px white,
+    600px 600px white,
+    700px 700px white,
+    800px 800px white,
+    900px 900px white,
+    100px 1200px white,
+    1200px 100px white;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  pointer-events: none;
+}
 
 
 .planet_container {
@@ -18,10 +74,15 @@ body {
 .sun {
     width: 750px;
     height: 750px;
-    margin: 80px;
+    margin: 80px auto; 
     border-radius: 50%;
-    background-color: rgb(233, 202, 27);
-    box-shadow: 12px 29px 81px 10px rgba(153, 140, 23, 0.788);
+    background-color: rgb(253, 184, 19); /* Basfärg */
+    background-image: radial-gradient(circle at 50% 50%, rgb(253, 221, 48), rgb(253, 184, 19), rgb(251, 160, 38), rgb(245, 128, 37)),
+                      radial-gradient(circle at 30% 70%, rgba(255, 255, 255, 0.8), transparent 70%),
+                      radial-gradient(circle at 70% 40%, rgba(255, 255, 255, 0.8), transparent 50%);
+    box-shadow: 0 0 80px 30px rgba(253, 184, 19, 0.7), /* Yttre ljuset */
+                0 0 120px 60px rgba(253, 160, 48, 0.5), 
+                inset 0 0 20px rgba(255, 221, 48, 0.5); /* Inre ljus för djup  */
 }
 
 .sun:hover{
@@ -44,64 +105,124 @@ body {
     background-color: rgb(111, 114, 114);
     width: 20px;
     height: 20px;
+    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.5), /* Inreskugga */
+    0 0 5px rgba(0, 0, 0, 0.2); /* Yttre skugga för suddighet */
+    background-image: /* Krater-effekt på planeten */
+        radial-gradient(circle at 5% 15%, #6e6e6e 5%, transparent 5%),
+        radial-gradient(circle at 25% 40%, #524f4f 7%, transparent 6%),
+        radial-gradient(circle at 45% 65%, #7e7e7e 8%, transparent 7%),
+        radial-gradient(circle at 70% 75%, #5c5c5c 6%, transparent 6%),
+        radial-gradient(circle at 70% 25%, #7e7e7e 8%, transparent 7%);
 }
 
 #venus {
-    background-color: rgb(189, 122, 22);
+    background-color: rgb(201, 122, 4);
     width: 40px;
     height: 40px;
+    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.5), 
+               0 0 5px rgba(0, 0, 0, 0.2); 
+    background-image: /* Ljuseffekt på planeten */
+        radial-gradient(circle at 40% 80%, rgba(255, 255, 255, 0.219) 10%, transparent 30%),
+        radial-gradient(circle at 80% 40%, rgba(255, 255, 255, 0.219) 10%, transparent 30%),
+        radial-gradient(circle at 30% 30%, rgba(255, 255, 255, 0.219) 20%, transparent 30%),
+        radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0.219) 15%, transparent 25%),
+        radial-gradient(circle at 70% 70%, rgba(255, 255, 255, 0.311) 10%, transparent 20%);
 }
 
 #earth {
-    background-color: rgb(40, 96, 250);
+    background-color: rgb(62, 102, 211);
     width: 50px;
     height: 50px;
+    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.5),
+               0 0 5px rgba(0, 0, 0, 0.2); 
+    background-image:  /*land-effekt*/
+    radial-gradient(ellipse at 20% 30%, #006400 10%, transparent 20%),  
+    radial-gradient(ellipse at 80% 80%, #006400 15% 20%, transparent 30% 40%),
+    radial-gradient(ellipse at 50% 95%, #006400 15% 20%, transparent 30% 40%); 
 }
 
 #mars {
     background-color: rgb(190, 82, 32);
     width: 35px;
     height: 35px;
+    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.5), 
+    0 0 5px rgba(0, 0, 0, 0.2); 
+    background-image:  /* Krater-effekt */
+        radial-gradient(circle at 20% 30%, #ff5733 4%, transparent 10%),
+        radial-gradient(circle at 55% 45%, #c44d29 6%, transparent 20%), 
+        radial-gradient(circle at 70% 20%, #ac3319 5%, transparent 15%),
+        radial-gradient(circle at 60% 70%, #ac3319 7%, transparent 20%); 
 }
 
 #jupiter {
     background-color: rgb(224, 178, 118);
-    width: 80px;
-    height: 80px;
+    width: 90px;
+    height: 90px;
+    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.5), 
+    0 0 5px rgba(0, 0, 0, 0.2); 
+    background-image: 
+        linear-gradient(130deg,
+                        rgb(218, 151, 107) 15%, 
+                        rgb(224, 178, 118) 25%, 
+                        rgb(172, 107, 64) 50%, 
+                        rgb(224, 178, 118) 75%,
+                        rgb(218, 151, 107) 85%),
+        radial-gradient(circle at 70% 30%, rgb(255, 68, 0) 10%, transparent 15%);
 }
 
-/*Saturnus blir kodad lite annorlunda eftersom att jag vill lägga till en "ring" */
+
 #saturn {
     background-color: rgb(255, 232, 168);
-    width: 60px;
-    height: 60px;
+    width: 65px;
+    height: 65px;
     position: relative;
     border-radius: 50%;
     margin: 60px;
+    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.5), 
+    0 0 5px rgba(0, 0, 0, 0.2); 
+    background-image: 
+        linear-gradient(160deg,
+                    rgb(218, 174, 107) 15%, 
+                    rgb(190, 167, 135) 18%, 
+                    rgb(218, 174, 107) 50%, 
+                    rgb(190, 167, 135) 53%,
+                    rgb(218, 174, 107) 85%),
+    radial-gradient(circle at 70% 30%, rgb(255, 145, 0) 10%, transparent 15%);
 }
 
-/*Här lägger jag till saturnus ring och använder också z-index för att överlappa */
+/*Här lägger jag till saturnus ring och dess effekt */
 #saturn::before {
     content: "";
     position: absolute;
     top: 50%;
     transform: translateY(-50%) rotate(-15deg);
-    left: -30px;
-    width: 120px;
-    height: 5px;
+    left: -33px;
+    width: 130px;
+    height: 7px;
     border-radius: 50%;
-    background-color: rgb(156, 141, 100);
+    background-color: rgba(229, 214, 173, 0.438);
     z-index: 1;
 }
 
 #uranus {
-    background-color: rgb(161, 211, 214);
-    width: 40px;
-    height: 40px;
+    background-color: rgb(150, 242, 247);
+    width: 45px;
+    height: 45px;
+    box-shadow: inset 0 0 15px rgba(0, 0, 0, 0.61), 
+    0 0 5px rgba(0, 0, 0, 0.589); 
 }
 
 #neptune {
     background-color: rgb(0, 119, 255);
     width: 50px;
     height: 50px;
+    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.5), 
+    0 0 5px rgba(0, 0, 0, 0.2); 
+    background-image: 
+    linear-gradient(160deg,
+                    rgb(146, 197, 255) 5%, 
+                    rgb(0, 119, 255) 18%, 
+                    rgb(122, 183, 252) 50%, 
+                    rgb(0, 119, 255)90%),
+    radial-gradient(circle at 70% 30%, rgb(0, 119, 255) 10%, transparent 15%);
 }
