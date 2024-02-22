@@ -96,15 +96,22 @@ h1{
 
 .search_container {
     position: absolute;
-    top: 95px; 
+    top: 200px; 
+    right: 80px;
     z-index: 10; 
 }
 
 #searchBox {
     padding: 10px;
-    width: 300px; 
-    font-size: 16px;
-    border: 2px solid #ddd;
+    width: 10vw; 
+    height: 2vw;
+    min-width: 200px;
+    font-size: 12px;
+    font-family: "Lora", serif;
+    letter-spacing: 3px;
+    color: white;
+    background-color: rgba(255, 255, 255, 0.089);
+    border: 1px solid rgba(255, 255, 255, 0.171);
     border-radius: 5px;
     outline: none;
 }
