@@ -40,8 +40,8 @@ export function displayOverlay(body) {
     <p>${body.circumference} km</p> 
     </li>
     <li>
-    <h4>Rotation</h4>
-    <p>${body.rotation}</p> 
+    <h4>Omloppstid</h4>
+    <p>${body.orbitalPeriod} dygn</p> 
     </li>
     <li>
     <h4>Dag Temperatur</h4>
