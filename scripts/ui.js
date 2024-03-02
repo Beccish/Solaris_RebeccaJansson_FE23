@@ -37,7 +37,7 @@ export function displayOverlay(body) {
     <ul>
     <li>
     <h4>Omkrets</h4>
-    <p>${body.circumference}km</p> 
+    <p>${body.circumference} km</p> 
     </li>
     <li>
     <h4>Rotation</h4>
@@ -45,11 +45,11 @@ export function displayOverlay(body) {
     </li>
     <li>
     <h4>Dag Temperatur</h4>
-    <p>${body.temp.day}</p> 
+    <p>${body.temp.day}C</p> 
     </li>
     <li>
     <h4>Natt Temperatur</h4>
-    <p>${body.temp.night}</p> 
+    <p>${body.temp.night}C</p> 
     </li>
     </ul>
 `;
